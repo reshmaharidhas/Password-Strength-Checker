@@ -29,7 +29,7 @@ public class PasswordStrengthChecker extends JFrame implements ActionListener{
         btnCheck.setBounds(90,150,240,30);
         btnCheck.addActionListener(this);
         result = new JLabel();
-        result.setBounds(130,200,150,30);
+        result.setBounds(170,200,150,30);
         result.setForeground(Color.red);
         suggestion = new JLabel();
         suggestion.setBounds(130,230,150,30);
@@ -55,14 +55,14 @@ public class PasswordStrengthChecker extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String password = passwordfield.getText();
         if(password.matches("(\\s)*")){
-            result.setText("EMPTY SPACES");
-            result.setForeground(Color.red);
-            suggestion.setText("");
+            suggestion.setText("EMPTY SPACES");
+            suggestion.setForeground(Color.red);
+            result.setText("");
         }
         else if(password.matches("(.)*(\\s)+(.)*")){
-            result.setText("Whitespace not allowed");
-            result.setForeground(Color.red);
-            suggestion.setText("");
+            suggestion.setText("Whitespace not allowed");
+            suggestion.setForeground(Color.red);
+            result.setText("");
         }
         else if(password.length()<8){
             result.setText("WEAK!");
@@ -85,7 +85,7 @@ public class PasswordStrengthChecker extends JFrame implements ActionListener{
                 suggestion.setForeground(Color.red);
             }
             else{
-                boolean hasSymbol = password.matches("(.)*[\\*\\!\\@\\#\\$\\%\\^\\&\\_\\-\\+\\=\\.\\'\\~\\,\\(\\)\\:\\;\\<\\>\\[\\]\\|\\}\\{]+(.)*");
+                boolean hasSymbol = password.matches("(.)*[\\*\\!\\@\\#\\$\\%\\^\\&\\_\\-\\+\\=\\.\\'\\~\\,\\(\\)\\:\\;\\<\\>\\[\\]\\|\\}\\{\\/]+(.)*");
                 if(hasSymbol){
                     result.setText("STRONG");
                     result.setForeground(Color.GREEN);
@@ -93,6 +93,7 @@ public class PasswordStrengthChecker extends JFrame implements ActionListener{
                 }
                 else{
                     result.setText("WEAK!");
+                    result.setForeground(Color.red);
                     suggestion.setText("Add any symbol");
                 }
             }
