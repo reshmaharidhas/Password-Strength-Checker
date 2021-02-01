@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.Image;
 
 /**
  *
@@ -17,9 +18,9 @@ public class PasswordStrengthChecker extends JFrame implements ActionListener{
     JLabel label,result,suggestion;
     JTextField passwordfield;
     JButton btnCheck;
-    ImageIcon icon;
+    Image icon;
     PasswordStrengthChecker(){
-        icon = new ImageIcon("C:\\Documents\\NetBeansProjects\\Password Strength Checker\\src\\icons\\password.png");
+        icon = new ImageIcon(this.getClass().getResource("/icons/password.png")).getImage();
         label = new JLabel("Enter your password to check its strength");
         label.setBounds(70,60,260,30);
         label.setForeground(Color.white);
