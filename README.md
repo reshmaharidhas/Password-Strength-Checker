@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/github/repo-size/reshmaharidhas/Password-Strength-Checker">
   <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Freshmaharidhas%2FPassword-Strength-Checker&label=Visitors&labelColor=%23000000&countColor=%2300ff00&style=plastic" />
   <img src="https://img.shields.io/github/downloads/reshmaharidhas/Password-Strength-Checker/total?style=flat-square&labelColor=black&color=purple">
+  <img src="https://img.shields.io/github/created-at/reshmaharidhas/Password-Strength-Checker?color=%230b33e3"/>
 </p><br>
 Java desktop application to find the strength of password
 
